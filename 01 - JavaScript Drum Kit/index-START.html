@@ -66,8 +66,14 @@
     audio.play();
   };
 
+  const addPlayingClass = () => {
+    const playingClass = document.querySelector(`.key[data-key="${event.keyCode}"`)
+    playingClass.classList.add('playing');
+  }
+
   window.addEventListener('keydown', event => {
     audioPlay();
+    addPlayingClass();
   });  
 
 

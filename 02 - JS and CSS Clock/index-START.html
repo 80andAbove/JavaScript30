@@ -72,7 +72,31 @@
 
   <script>
 
+  function setDate() {
+    const now = new Date();
+
+    const hour = now.getHours();
+    console.log(hour);
+    const hoursDegrees = ((hour / 24 ) * 360);
+    const hour_hand = document.querySelector('.hour-hand');
+    // hour_hand.style.transform = `rotate(${hoursDegrees}deg)`;
+
+    const minutes = now.getMinutes();
+    const minutesDegrees = ((minutes / 60 ) * 360); 
+    const minute_hand = document.querySelector('.min-hand');
+    // minute_hand.style.transform = `rotate(${minutesDegrees}deg)`;
     
+
+    const seconds = now.getSeconds();
+    const secondsDegrees = ((seconds / 60 ) * 360); 
+    const seconds_hand = document.querySelector('.second-hand');
+    seconds_hand.style.transform = `rotate(${secondsDegrees}deg)`;
+    
+    
+  }
+  
+  setInterval(setDate, 1000);
+  
 
   </script>
 </body>

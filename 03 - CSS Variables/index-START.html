@@ -22,6 +22,22 @@
 
   <style>
 
+    :root {
+      --base: #ffc600;
+      --spacing: 10px;
+      --blur: 10px;
+    }
+
+    img{
+      padding: var(--spacing);
+      background: var(--base);
+      filter: blur(var(--blur));
+    }
+
+    .hl{
+      color: var(--base);
+    }
+
     /*
       misc styles, nothing to do with CSS variables
     */
@@ -45,6 +61,18 @@
   </style>
 
   <script>
+    // Goal: When sliding the input bar, it should change the values which in return changes the visuals
+    // 1) Target the input
+    // 2) When the user inputs the value, the input has to match that value
+    // 3) As the value changes, the changes should reflect on the visuals as well
+
+    const inputs = document.querySelectorAll('.controls input');
+
+    console.log(inputs)
+
+    inputs.forEach(input => console.log(input.value))
+    
+
   </script>
 
 </body>
